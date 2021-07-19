@@ -88,18 +88,17 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(inning, num){
+function finalScore(innings, num){
   let homeSum = 0;
   let awaySum = 0;
-  let object = {
+  for (let i=0; i<num; i++){
+    homeSum += innings();
+    awaySum += innings();
+  }
+  return {
     "Home": homeSum,
     "Away": awaySum
   }
-  for (let i=0; i<num; i++){
-    homeSum += inning();
-    awaySum += inning();
-  }
-  return object;
 }
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
